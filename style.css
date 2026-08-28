@@ -21,6 +21,11 @@
     --border: #362c20;
     --card-bg: #241e17;
   }
+
+  body::before,
+  body::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 140'%3E%3Cpath d='M20,0 C34,17 34,35 20,52 C6,69 6,87 20,104 C30,116 33,128 20,140' fill='none' stroke='%23c97f77' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");
+  }
 }
 
 * { box-sizing: border-box; }
@@ -50,9 +55,8 @@ body::after {
   top: 0;
   bottom: 0;
   width: 40px;
-  color: var(--accent-soft);
-  opacity: 0.4;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 140'%3E%3Cpath d='M20,0 C34,17 34,35 20,52 C6,69 6,87 20,104 C30,116 33,128 20,140' fill='none' stroke='currentColor' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");
+  opacity: 0.6;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 140'%3E%3Cpath d='M20,0 C34,17 34,35 20,52 C6,69 6,87 20,104 C30,116 33,128 20,140' fill='none' stroke='%23b0554f' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: repeat-y;
   background-size: 40px 140px;
   background-position: top center;
