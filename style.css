@@ -40,9 +40,8 @@ body {
   padding: 0 1.5rem;
 }
 
-/* Decorative margin rails: a hairline with ruler-style ticks, echoing the
-   site's brace-corner photo frames. Desktop only — there's no margin to
-   put them in below the breakpoint. */
+/* Decorative margin ribbons: a flowing wavy line in the accent color.
+   Desktop only — there's no margin to put them in below the breakpoint. */
 body::before,
 body::after {
   content: "";
@@ -50,20 +49,21 @@ body::after {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 24px;
-  background:
-    linear-gradient(var(--border), var(--border)) center / 1px 100% no-repeat,
-    repeating-linear-gradient(
-      to bottom,
-      var(--accent-soft) 0 2px,
-      transparent 2px 64px
-    ) center / 18px 100% no-repeat;
-  opacity: 0.5;
+  width: 40px;
+  color: var(--accent-soft);
+  opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 140'%3E%3Cpath d='M20,0 C34,17 34,35 20,52 C6,69 6,87 20,104 C30,116 33,128 20,140' fill='none' stroke='currentColor' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: repeat-y;
+  background-size: 40px 140px;
+  background-position: top center;
   pointer-events: none;
 }
 
-body::before { left: calc(50% - 460px); }
-body::after { right: calc(50% - 460px); }
+body::before { left: calc(50% - 470px); }
+body::after {
+  right: calc(50% - 470px);
+  transform: scaleX(-1);
+}
 
 @media (min-width: 1100px) {
   body::before,
