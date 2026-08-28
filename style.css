@@ -80,6 +80,26 @@ main { padding: 3.5rem 0; }
 
 section { margin-bottom: 4.5rem; }
 
+.profile-photo {
+  width: 116px;
+  height: 116px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  box-shadow: inset 0 0 0 2px var(--bg), 0 0 0 1px var(--accent-soft);
+  padding: 4px;
+  background: var(--card-bg);
+  margin-bottom: 1.5rem;
+}
+
+.profile-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .eyebrow {
   font-family: var(--sans);
   color: var(--accent);
@@ -148,6 +168,40 @@ h2 {
 
 .card p { color: var(--muted); margin: 0 0 0.8rem; font-size: 0.98rem; }
 
+.photo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 0 0 0.9rem;
+}
+
+.photo-frame {
+  display: block;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 4px;
+  background: var(--card-bg);
+  border: 3px solid var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent-soft), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.photo-frame:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 0 1px var(--accent-soft), 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.photo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
 .card a, .feature-title {
   font-family: var(--sans);
   color: var(--accent);
@@ -170,8 +224,10 @@ h2 {
 .feature {
   display: flex;
   gap: 1.1rem;
-  align-items: baseline;
+  align-items: flex-start;
 }
+
+.feature .photo-strip { margin: 0.9rem 0 0; }
 
 .feature-tag {
   flex: 0 0 auto;
@@ -200,6 +256,15 @@ h2 {
   margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.feature-title-plain {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.35rem;
 }
 
 .links {

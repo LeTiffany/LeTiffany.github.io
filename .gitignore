@@ -1,0 +1,8 @@
+# Raw camera-original photos (full-res, kept locally only).
+# Optimized copies used by the site live in assets/images/web/.
+assets/images/*.jpg
+assets/images/*.jpeg
+assets/images/*.JPG
+assets/images/*.JPEG
+assets/images/*.png
+assets/images/*.PNG
