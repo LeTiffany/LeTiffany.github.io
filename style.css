@@ -81,23 +81,34 @@ main { padding: 3.5rem 0; }
 section { margin-bottom: 4.5rem; }
 
 .profile-photo {
-  width: 116px;
-  height: 116px;
+  position: relative;
+  width: 200px;
   box-sizing: border-box;
-  border-radius: 50%;
-  border: 4px solid var(--accent);
-  box-shadow: inset 0 0 0 2px var(--bg), 0 0 0 1px var(--accent-soft);
-  padding: 4px;
-  background: var(--card-bg);
-  margin-bottom: 1.5rem;
+  padding: 18px;
+  margin-bottom: 1.75rem;
+}
+
+.profile-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(var(--accent), var(--accent)) top left / 28px 3px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) top left / 3px 28px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) top right / 28px 3px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) top right / 3px 28px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) bottom left / 28px 3px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) bottom left / 3px 28px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) bottom right / 28px 3px no-repeat,
+    linear-gradient(var(--accent), var(--accent)) bottom right / 3px 28px no-repeat;
 }
 
 .profile-photo img {
   display: block;
   width: 100%;
-  height: 100%;
-  border-radius: 50%;
+  aspect-ratio: 1066 / 1600;
   object-fit: cover;
+  border-radius: 2px;
 }
 
 .eyebrow {
