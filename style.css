@@ -309,6 +309,10 @@ h2 {
   margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .feature-title-plain {
@@ -330,6 +334,9 @@ h2 {
 }
 
 .links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   color: var(--accent);
   text-decoration: none;
   font-size: 0.95rem;
@@ -337,6 +344,12 @@ h2 {
 }
 
 .links a:hover { color: var(--accent-soft); }
+
+.icon {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+}
 
 .cv-preview {
   display: block;
