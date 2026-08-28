@@ -306,6 +306,30 @@ h2 {
 
 .links a:hover { color: var(--accent-soft); }
 
+.cv-preview {
+  display: block;
+  max-width: 420px;
+  padding: 5px;
+  margin: 0 0 1.1rem;
+  background: var(--card-bg);
+  border: 3px solid var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent-soft), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cv-preview:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 0 1px var(--accent-soft), 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.cv-preview img {
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+}
+
 #cv a {
   font-family: var(--sans);
   color: var(--accent);
