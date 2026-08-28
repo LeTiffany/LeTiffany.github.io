@@ -40,6 +40,38 @@ body {
   padding: 0 1.5rem;
 }
 
+/* Decorative margin rails: a hairline with ruler-style ticks, echoing the
+   site's brace-corner photo frames. Desktop only — there's no margin to
+   put them in below the breakpoint. */
+body::before,
+body::after {
+  content: "";
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  background:
+    linear-gradient(var(--border), var(--border)) center / 1px 100% no-repeat,
+    repeating-linear-gradient(
+      to bottom,
+      var(--accent-soft) 0 2px,
+      transparent 2px 64px
+    ) center / 18px 100% no-repeat;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+body::before { left: calc(50% - 460px); }
+body::after { right: calc(50% - 460px); }
+
+@media (min-width: 1100px) {
+  body::before,
+  body::after {
+    display: block;
+  }
+}
+
 .site-header {
   border-bottom: 1px solid var(--border);
   padding: 1.4rem 0;
