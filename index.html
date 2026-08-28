@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiffany Le</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="logo">Tiffany Le</span>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="about" class="hero">
+    <h1>Hi, I'm Tiffany Le.</h1>
+    <!-- TODO: replace with your real one-paragraph bio -->
+    <p class="tagline">
+      A short one- or two-sentence intro goes here — who you are, what you work on,
+      and what you're interested in.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card-grid">
+
+      <article class="card">
+        <h3>TNC Camera Trap Research</h3>
+        <p>
+          <!-- TODO: replace with a real description -->
+          Environmental data analysis project studying wildlife camera trap data,
+          groundwater, and monsoon change-point detection.
+        </p>
+        <a href="https://github.com/lapidesd/TNC_cameras" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+      </article>
+
+      <article class="card placeholder">
+        <h3>Project Two</h3>
+        <p><!-- TODO: add another project --></p>
+        <a href="#">Link &rarr;</a>
+      </article>
+
+      <article class="card placeholder">
+        <h3>Project Three</h3>
+        <p><!-- TODO: add another project --></p>
+        <a href="#">Link &rarr;</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="cv">
+    <h2>CV</h2>
+    <!-- TODO: drop your resume PDF in assets/ and update the link below -->
+    <p><a href="assets/CV.pdf" target="_blank" rel="noopener">Download my CV (PDF) &rarr;</a></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <ul class="links">
+      <!-- TODO: update these with your real links -->
+      <li><a href="mailto:tiffany.mc.le@gmail.com">Email</a></li>
+      <li><a href="https://github.com/LeTiffany" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>&copy; <span id="year"></span> Tiffany Le</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
