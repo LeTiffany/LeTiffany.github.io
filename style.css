@@ -6,6 +6,8 @@
   --accent-soft: #b0554f;
   --border: #e6dac6;
   --card-bg: #fffbf3;
+  --link: #c1662b;
+  --link-soft: #de8443;
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -20,6 +22,8 @@
     --accent-soft: #c97f77;
     --border: #362c20;
     --card-bg: #241e17;
+    --link: #e8935a;
+    --link-soft: #f0ad7d;
   }
 
   body::before,
@@ -329,14 +333,14 @@ h2 {
 
 .feature-body p a,
 .card p a {
-  color: var(--accent);
+  color: var(--link);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .feature-body p a:hover,
 .card p a:hover {
-  color: var(--accent-soft);
+  color: var(--link-soft);
 }
 
 .feature-title-plain {
